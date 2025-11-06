@@ -22,27 +22,29 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="hero">
       <div className="container" ref={heroRef} style={{ transition: 'transform 0.1s ease-out' }}>
         {/* Profile Picture */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.5, y: -30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           style={{
-            marginBottom: '2rem',
+            marginBottom: '2.5rem',
+            marginTop: '1rem',
             display: 'flex',
             justifyContent: 'center',
           }}
         >
           <div style={{
-            width: '200px',
-            height: '200px',
+            width: '220px',
+            height: '220px',
             borderRadius: '50%',
             overflow: 'hidden',
-            border: '4px solid var(--neon-cyan)',
-            boxShadow: '0 0 40px rgba(0, 212, 255, 0.5)',
+            border: '5px solid var(--neon-cyan)',
+            boxShadow: '0 0 50px rgba(0, 212, 255, 0.6), 0 0 100px rgba(0, 212, 255, 0.3)',
             animation: 'glow 3s ease-in-out infinite',
+            position: 'relative',
           }}>
             <img 
               src="https://avatars.githubusercontent.com/u/191116040?v=4" 
