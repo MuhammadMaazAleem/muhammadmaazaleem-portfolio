@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import './App.css';
+import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -29,6 +30,9 @@ function App() {
 
       {/* Custom Cursor */}
       <CustomCursor />
+
+      {/* Navigation */}
+      <Navigation />
 
       {/* 3D Background */}
       <Background3D />
